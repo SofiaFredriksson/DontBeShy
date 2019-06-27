@@ -17,4 +17,10 @@ class SolutionsController < ApplicationController
             render :new
           end
       end
+
+      private
+      
+      def solution_params
+        params.require(:solution).permit(:content, :staff_id, :post_id)
+      end 
 end
