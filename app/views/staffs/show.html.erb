@@ -1,0 +1,12 @@
+<h1><%=@staff.name%></h1>
+<h2><%=@staff.title%></h2>
+
+<h3>Questions</h3>
+<%@staff.posts.each do |post|%>
+    <u><%=post.title%></u><br>
+    <%=post.content%><br>
+    ---Answers---<br>
+    <%post.solutions.each do |solution|%>
+        <%= solution.content%>
+    <%end%>
+<%end%>
