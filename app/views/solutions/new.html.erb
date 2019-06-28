@@ -1,6 +1,8 @@
 <h1>Write your solution</h1>
 
 <%=form_for(@solution) do |f| %>
+    <%= f.hidden_field :post_id, value: params[:post_id]%>
+    <%= f.hidden_field :staff_id, value: @post.staff_id%>
     <%=f.text_field :content %>
     <%=f.submit%>
     <%end%>

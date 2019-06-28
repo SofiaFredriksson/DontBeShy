@@ -5,11 +5,12 @@ class SolutionsController < ApplicationController
     end
 
     def new
+      @post = Post.find(params[:post_id])
         @solution = Solution.new
       end
     
       def create
-        @staffs= Stall.all
+        @post = Post.find(params[:solution][:post_id])
         @solution = Solution.new(solution_params)
           if @solution.save
             redirect_to solution_path(@solution)

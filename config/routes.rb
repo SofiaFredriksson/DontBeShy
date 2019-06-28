@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   resources :staffs
-  resources :solutions
+
   resources :posts
-  resources :categories
+  resources :solutions
+  resources :posts do 
+    resources :solutions
+  end
 end
