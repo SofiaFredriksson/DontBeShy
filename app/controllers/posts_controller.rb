@@ -9,7 +9,7 @@ class PostsController < ApplicationController
 
     def create 
         # binding.pry
-        @post = Post.new
+        @post = Post.new(post_params)
         if  @post.save 
             redirect_to post_path(@post)
         else 
@@ -20,6 +20,6 @@ class PostsController < ApplicationController
     private 
 
     def post_params
-        params.require(:post).permit(:content, :title, :staff_id)
+        params.require(:post).permit(:content, :title, :staff_id, :category_id)
     end 
 end

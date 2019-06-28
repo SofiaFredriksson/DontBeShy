@@ -1,6 +1,7 @@
 Staff.destroy_all
 Post.destroy_all
 Solution.destroy_all
+Category.destroy_all
 
 c1 = Category.create(name: "Miscellaneous")
 
