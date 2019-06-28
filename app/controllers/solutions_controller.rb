@@ -9,7 +9,7 @@ class SolutionsController < ApplicationController
       end
     
       def create
-
+        @staffs= Stall.all
         @solution = Solution.new(solution_params)
           if @solution.save
             redirect_to solution_path(@solution)
