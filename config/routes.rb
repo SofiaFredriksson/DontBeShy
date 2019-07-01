@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  root to: 'pages#home'
+  
   resources :staffs
 
   resources :posts

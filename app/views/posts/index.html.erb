@@ -1,13 +1,26 @@
-<h1>Don't Be Shy</h1>
-<%= link_to "Ask a Question", new_post_path() %><br><br>
+<h1>Questions</h1>
 
 <%@posts.each  do |post|%>
-    <u><%=link_to post.title, post_path(post) %></u><br>
-    <%=post.content%><br>
-    <%= link_to "Answer Me", new_post_solution_path(post) %><br>
+    <div class="row">
+    <div class="col-sm-3">
+    <div class="card">
+    <div class="card-body" >
+    
+    <class="card-title"><%=link_to post.title, post_path(post) %></><br>
+    <p class="card-text"><%=post.content%></p><br>
+    <button type="button" class="btn btn-light btn-sm"><%= link_to "Answer Me", new_post_solution_path(post) %></button><br>
     ---Answers---<br>
     <%post.solutions.each do |solution|%>
         <%=solution.content%><br>
         <%=link_to solution.staff.name, staff_path(solution.staff)%>
         <%end%><br><br>
+        </div>
+        </div>
+        </div>
+        </div>
     <%end%>
+        
+
+
+
+    
