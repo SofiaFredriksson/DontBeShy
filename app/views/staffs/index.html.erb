@@ -1,6 +1,6 @@
 <h1>All Staff</h1>
 
 <% @staffs.each do |staff|%>
-    <%=staff.name%>
+    <b><%= link_to staff.name, staff_path(staff) %></b><br>
     <%=staff.title%>
     <%end%>

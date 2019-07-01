@@ -1,7 +1,7 @@
 <h1>Question?</h1>
 
 <%@posts.each  do |post|%>
-    <u><%=post.title%></u><br>
+    <u><%=link_to post.title, post_path(post) %></u><br>
     <%=post.content%><br>
     ---Answer---<br>
     <%post.solutions.each do |solution|%>

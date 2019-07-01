@@ -1,2 +1,7 @@
 <h1><%=@post.title%></h1>
-<%=@post.content%>
+<%=@post.content%><br><br>
+---Answers---<br>
+<% @post.solutions.each do |solution| %>
+<%= solution.content %><br>
+<%= solution.staff.name %><br>
+<% end %>
