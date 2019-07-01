@@ -1,11 +1,13 @@
-<h1>Question?</h1>
+<h1>Don't Be Shy</h1>
+<%= link_to "Ask a Question", new_post_path() %><br><br>
 
 <%@posts.each  do |post|%>
     <u><%=link_to post.title, post_path(post) %></u><br>
     <%=post.content%><br>
-    ---Answer---<br>
+    <%= link_to "Answer Me", new_post_solution_path(post) %><br>
+    ---Answers---<br>
     <%post.solutions.each do |solution|%>
         <%=solution.content%><br>
-        <%=solution.staff.name%>
+        <%=link_to solution.staff.name, staff_path(solution.staff)%>
         <%end%><br><br>
     <%end%>
