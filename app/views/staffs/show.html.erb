@@ -2,12 +2,21 @@
 <h2><%=@staff.title%></h2>
 
 <h3>Questions</h3>
+<div class="row">
 <%@staff.posts.each do |post|%>
+    <div class="col-sm-3">
+    <div class="card">
+    <div class="card-body" >
+
     <u><%= link_to post.title, post_path(post), class: 'link' %></u><br>
     <%=post.content%><br>
     ---Answers---<br>
     <%post.solutions.each do |solution|%>
         <%= solution.content%><br>
     <%end%><br><br>
+    </div>
+        </div>
+        </div>
 <%end%>
+</div>
 
