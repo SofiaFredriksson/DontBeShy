@@ -2,5 +2,5 @@
 
 <% @staffs.each do |staff|%>
     <b><%= link_to staff.name, staff_path(staff) %></b><br>
-    <%=staff.title%>
+    <p><%=staff.title%></p>
     <%end%>

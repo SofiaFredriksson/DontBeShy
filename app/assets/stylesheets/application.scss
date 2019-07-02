@@ -16,3 +16,26 @@
 @import "bootstrap-sprockets";  
 @import "bootstrap";
 
+
+body, html {
+  height: 100%;
+  margin: 0;
+  h1 {
+  color: white;
+  }
+}
+
+.bg {
+  /* The image used */
+  background-image: url("image.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
