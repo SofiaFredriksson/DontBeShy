@@ -3,11 +3,21 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .card-body {
-    background-color: pink;
+    background-color:rgba(0, 0, 0, 0.5);
     margin: 10px;
     padding: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.75); 
 }
 
 label {
     color: white;
+}
+
+select {
+    color: black;
+    background-color: black
+}
+
+button {
+    background-color: rgba(112, 112, 112, 0.5)
 }

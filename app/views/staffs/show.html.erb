@@ -3,7 +3,7 @@
 
 <h3>Questions</h3>
 <%@staff.posts.each do |post|%>
-    <u><%= link_to post.title, post_path(post) %></u><br>
+    <u><%= link_to post.title, post_path(post), class: 'link' %></u><br>
     <%=post.content%><br>
     ---Answers---<br>
     <%post.solutions.each do |solution|%>
