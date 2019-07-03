@@ -9,5 +9,5 @@
     <%=collection_select(:post, :category_id, Category.all, :id, :name, prompt: true)%><br><br>
     <%=f.label :staff_id%><br>
     <%=collection_select(:post, :staff_id, Staff.all, :id, :name, prompt: true)%><br><br>
-    <%=f.submit "Submit Question", class: 'submit'%>
+    <%=f.submit "Submit Question", class: 'submit btn'%>
 <%end%>
