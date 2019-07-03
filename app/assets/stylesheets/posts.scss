@@ -3,10 +3,11 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .card-body {
-    background-color:rgba(0, 0, 0, 0.5);
+    background-color:rgba(181, 245, 231, 0.932);
     margin: 10px;
     padding: 5px;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.75); 
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4); 
+    border-radius: 10px
 }
 
 label {
@@ -15,13 +16,13 @@ label {
 
 select {
     color: black;
-    background-color: black
+    background-color: white
 }
 
 button {
-    background-color: rgba(112, 112, 112, 0.5)
+    background-color: rgba(220, 245, 239, 0.932)
 }
 
 .submit {
-    background-color: black
+    background-color: rgba(181, 245, 231, 0.932)
 }

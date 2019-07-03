@@ -8,12 +8,13 @@
     <div class="card">
     <div class="card-body" >
 
-    <u><%= link_to post.title, post_path(post), class: 'link' %></u><br>
+    <b><%= link_to post.title, post_path(post), class: 'link' %></b><br>
     <%=post.content%><br>
     ---Answers---<br>
     <%post.solutions.each do |solution|%>
         <%= solution.content%><br>
-    <%end%><br><br>
+        ---<br>
+    <%end%>
     </div>
         </div>
         </div>
