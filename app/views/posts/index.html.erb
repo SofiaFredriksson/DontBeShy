@@ -8,12 +8,14 @@
     
     <b class="card-title"><%=link_to post.title, post_path(post), class: 'link' %></b><br>
     <%=post.content%><br>
-    <button type="button" class="btn btn-dark btn-sm"><%= link_to "Answer Me", new_post_solution_path(post), class: 'link' %></button><br>
    <b>---Answers---</b><br>
     <%post.solutions.each do |solution|%>
         <%=solution.content%><br>
         <%=link_to solution.staff.name, staff_path(solution.staff), class: 'link'%><br>
-        <%end%><br><br>
+        ---<br>
+        
+        <%end%>
+        <button type="button" class="btn btn-dark btn-sm"><%= link_to "Answer Me", new_post_solution_path(post), class: 'link' %></button><br>
         </div>
         </div>
         </div>
