@@ -1,8 +1,12 @@
 <h1>Write your solution</h1>
 
-<%=bootstrap_form_for(@solution) do |f| %>
-    <%= f.hidden_field :post_id, value: params[:post_id]%>
-    <%= f.hidden_field :staff_id, value: @post.staff_id%>
-    <%=f.text_field :content, { label: "Solution" }%>
-    <%=f.submit "Submit Solution", class: 'btn submit'%>
-    <%end%>
+<div class="card card-main-form">
+    <div class="card-body form-card">
+        <%=bootstrap_form_for(@solution) do |f| %>
+            <%= f.hidden_field :post_id, value: params[:post_id]%>
+            <%= f.hidden_field :staff_id, value: @post.staff_id%>
+            <%=f.text_field :content, { label: "Solution" }%>
+            <%=f.submit "Submit Solution", class: 'btn submit'%>
+        <%end%>
+    </div>
+</div>
