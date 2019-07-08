@@ -2,13 +2,17 @@
 
 <%= bootstrap_form_for(@post) do |f|%>
 
-    <%=f.text_field :title%><br><br>
+    <%=f.text_field :title%>
 
-    <%=f.text_area :content%><br><br><br>
-    <%=f.label :category_id%><br>
-    <%=collection_select(:post, :category_id, Category.all, :id, :name, prompt: true)%><br><br>
-    <%=f.label :staff_id%><br>
-    <%=collection_select(:post, :staff_id, Staff.all, :id, :name, prompt: true)%><br><br>
+    <%=f.text_area :content%>
+    <div class="form-group ">
+    <%=f.collection_select(:category_id, Category.all, :id, :name, {include_blank: true}, {class: 'form-control '})%>
+    </div>
+
+    <div class="form-group ">
+    <%=f.collection_select(:staff_id, Staff.all, :id, :name, {include_blank: true}, {class: 'form-control '})%>
+    </div>
+
     <%=f.submit "Submit Question", class: 'submit btn'%>
 <%end%>
 
