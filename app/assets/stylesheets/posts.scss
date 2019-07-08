@@ -7,7 +7,8 @@
     margin: 10px;
     padding: 5px;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4); 
-    border-radius: 10px
+    border-radius: 10px;
+    color: black
 }
 
 label {
@@ -20,9 +21,15 @@ select {
 }
 
 button {
-    background-color: rgba(220, 245, 239, 0.932)
+    background-color: rgba(220, 245, 239, 0.932);
+    padding: 10px
 }
 
 .submit {
     background-color: rgba(181, 245, 231, 0.932)
+}
+
+.form-card {
+    background-color: rgba(0, 0, 0, 0.5)
+
 }
