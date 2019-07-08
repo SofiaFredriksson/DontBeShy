@@ -15,7 +15,7 @@ class PostsController < ApplicationController
         # binding.pry
         @post = Post.new(post_params)
         if  @post.save 
-            redirect_to post_path(@post)
+            redirect_to posts_path
         else 
             render :new
         end 

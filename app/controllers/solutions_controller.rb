@@ -13,7 +13,7 @@ class SolutionsController < ApplicationController
         @post = Post.find(params[:solution][:post_id])
         @solution = Solution.new(solution_params)
           if @solution.save
-            redirect_to post_path(@post)
+            redirect_to posts_path
           else
             render :new
           end
