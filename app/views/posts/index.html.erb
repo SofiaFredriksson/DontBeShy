@@ -16,7 +16,10 @@
         
         <%end%>
         <button type="button" class="btn btn-sm"><%= link_to "Answer Me", new_post_solution_path(post), class: 'link' %></button><br>
-        <button class="btn btn-sm"><%=link_to 'Delete', post_path(post), method: :delete, data: { confirm: "Really?" }%></button>
+        <button class="btn btn-sm"><%=link_to post_path(post), method: :delete, data: { confirm: "Really?" }, remote: true do%>
+            <i class="fa fa-trash"></i>
+            <%end%>
+            </button>
         </div>
         </div>
         </div>
@@ -24,6 +27,6 @@
     <%end%>
     </div>
 
-
+   
 
     
