@@ -1,5 +1,6 @@
 class SolutionsController < ApplicationController
-
+  before_action :confirm_logged_in
+  
     def show
         @solution = Solution.find(params[:id])
     end

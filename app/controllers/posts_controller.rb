@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+    before_action :confirm_logged_in
     def index
         @posts = Post.all
     end 
