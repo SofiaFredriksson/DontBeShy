@@ -15,11 +15,14 @@
         <%=link_to solution.staff.name, staff_path(solution.staff), class: 'link'%></li>
         <%end%>
     </ul>
+    <%if session[:user_id] == post.staff_id%>
         <button type="button" class="btn btn-sm btn-outline-info"><%= link_to "Answer Me", new_post_solution_path(post), class: 'link' %></button>
+
         <button class="btn btn-sm btn-danger"><%=link_to post_path(post), method: :delete, data: { confirm: "Really?" }, remote: true do%>
             <i class="fa fa-trash"></i>
             <%end%>
             </button>
+            <%end%>
         </div>
         </div>
         </div>
