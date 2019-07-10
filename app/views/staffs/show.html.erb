@@ -8,9 +8,9 @@
     <div class="card">
     <div class="card-body" >
 
-    <b><%= link_to post.title, post_path(post), class: 'link' %></b><br>
-    <%=post.content%><br>
-   <b>---Answers---</b><br>
+    <b class="card-title"><%= link_to post.title, post_path(post), class: 'link' %></b><br>
+    <p class="card-text"><%=post.content%></p>
+   
     <ul class="list-group list-group-flush">
     <%post.solutions.each do |solution|%>
         <li class="list-group-item"><%= solution.content%></li>
