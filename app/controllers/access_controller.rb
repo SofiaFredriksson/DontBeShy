@@ -17,7 +17,7 @@ class AccessController < ApplicationController
     if authorized_user
       session[:user_id] = authorized_user.id
       flash[:notice] = "You are now logged in."
-      redirect_to(admin_path)
+      redirect_to(posts_path)
     else
       flash.now[:notice] = "Invalid usernam/password combination."
       render('login')
