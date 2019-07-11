@@ -1,15 +1,13 @@
 <h1>Sign Up</h1>
 
-<%= form_for @staff, :url => '/signup' do |f|%>
-    <%=f.label :name %>
+<div class="card card-main-form">
+    <div class="card-body form-card">
+<%= bootstrap_form_for @staff, :url => '/signup' do |f|%>
     <%=f.text_field :name %>
-    <%=f.label :username %>
-    <%=f.text_field :username %>
-    <%=f.label :title %>
     <%=f.text_field :title %>
-    <%=f.label :password %>
+    <%=f.text_field :username %>
     <%=f.password_field :password %>
-
     <%=f.submit%>
-
     <%end%>
+    </div>
+</div>
