@@ -1,28 +1,7 @@
 
 
-<%if session[:user_id]%>
 
-<button><%= link_to("Logout", access_logout_path)%></button>
-<%else%>
 
-<div class="card card-main-form">
-    <div class="card-body form-card">
-<%= form_tag(access_attempt_login_path, :method => :post) do %>
-    <table>
-        <tr>
-            <td><%= label_tag(:username)%></td>
-            <td><%= text_field_tag(:username, params[:username])%></td>
-        </tr>
-        <tr>
-        <td><%= label_tag(:password)%></td>
-        <td><%= password_field_tag(:password)%></td>
-        <tr>
-        <td>&nbsp;</td>
-        <td><%= submit_tag("Log In")%></td>
-    </tr>
-    </tr>
-    </table>
-    <% end %>
-    </div>
-    </div>
-    <%end%>
+<button class="btn btn-lg btn-outline-info"><%= link_to("Logout", access_logout_path)%></button>
+
+
