@@ -5,6 +5,9 @@ Rails.application.routes.draw do
 
   get 'admin', :to => 'access#menu'
 
+  get '/signup', to: 'staffs#new', as: 'signup'
+  post '/signup', to: 'staffs#create'
+
   get 'access/menu'
   get 'access/login'
   post 'access/attempt_login'
